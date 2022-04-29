@@ -1,0 +1,16 @@
+.grid-container {
+    display: grid;
+    /* quantidade de colunas na tela */
+    grid-template-columns: 1fr 1fr 1fr;
+    /* quantidade de linhas */
+    grid-template-rows: 1fr;
+    /* espaçamento de linhas e colunas */
+    column-gap: 15px;
+    row-gap: 10px;
+    
+    padding: 30px;
+  }
+  
+  .flowers .item > img {
+    width: 50%;
+  }

@@ -1,0 +1,25 @@
+<meta charset="UTF-8">
+
+    <script>
+        var loginCadastrado = "admin";
+        var senhaCadastrada = "admin";
+
+        var maximoTentativas = 3;
+        var tentativaAtual = 1;
+
+        while(tentativaAtual <= maximoTentativas){
+            var loginInformado = prompt("Informe seu login:");
+            var senhaInformada = prompt("Informe sua senha:");
+
+            if(loginCadastrado == loginInformado && senhaCadastrada == senhaInformada) {
+                alert("Bem vindo ao sistema, " + loginCadastrado + "!!");
+            } else {
+                if(tentativaAtual == 3){
+                    alert("Numero permitido de tentativas ultrapassado!!");
+                } else {
+                    alert("Login errado, por favor tente novamente!");
+                }
+                tentativaAtual = tentativaAtual + 1;
+            }
+        }
+    </script>

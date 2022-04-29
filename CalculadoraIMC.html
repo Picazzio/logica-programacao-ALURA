@@ -1,0 +1,62 @@
+<meta charset="UTF-8">
+<title>Calculadora de IMC</title>
+<script>
+
+    function pulaLinha() {
+
+        document.write("<br>");
+        document.write("<br>");
+}
+
+    function mostra(frase) {
+
+        document.write(frase);
+        pulaLinha();
+}
+
+    function calculaImc(altura, peso) {
+
+        return peso / (altura * altura);
+}
+
+var nome = prompt("Por favor, informe seu nome:");
+var alturaInformada = prompt("Altura:");
+var pesoInformado = prompt("Peso:");
+
+var imc = calculaImc(alturaInformada, pesoInformado);
+
+document.write("Ola, " + nome + ", o seu IMC é: " + imc);
+
+pulaLinha();
+
+if (imc < 18.6){
+    mostra("Você esta muito abaixo do peso ideal!");
+}
+if(imc >= 18.6 && imc <= 24.9){
+  
+    mostra("Você esta no seu peso ideal!");
+
+}
+if (imc >=24.9 && imc <= 30){
+          mostra("Você esta no acima do seu peso ideal!");
+    
+}
+
+if(imc > 30){
+    mostra("Você esta muito acima do seu peso ideal, procure ajuda de um profissional:")
+}
+
+</script>
+
+<button id="refresh">Novo calculo</button>
+<script>
+   
+
+var btn = document.querySelector("#refresh");
+btn.addEventListener("click", function() {
+    
+    location.reload();
+    });
+
+</script>
+
